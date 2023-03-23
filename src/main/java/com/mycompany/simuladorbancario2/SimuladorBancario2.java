@@ -47,6 +47,12 @@ public class SimuladorBancario2 {
         miCDT.calcularIntereses();
         System.out.println("sus intereses son " + miCDT.getValorLiquidacion());
         //Ahorros + cdt
-        System.out.println("Su saldo en Ahorro mas intereses del CDT es:" + (ahorro01.getSaldo() + miCDT.getValorLiquidacion()));
+        miCuenta.actualizarSaldos();
+        System.out.println("Su saldo en Ahorro mas intereses del CDT es:" + (miCuenta.getAhorro()) );
+         // actualizar cdt
+         miCuenta.dejar_0_CDT();
+         System.out.println("su saldo en CDT es:" + miCuenta.getCdt() );
+        
+    
     }
 }
