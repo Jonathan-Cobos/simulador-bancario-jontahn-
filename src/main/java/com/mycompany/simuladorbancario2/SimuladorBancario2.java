@@ -28,13 +28,25 @@ public class SimuladorBancario2 {
         //Asociar cuenta
         MiBanco.setCliente1(miCuenta);
         System.out.println("su cuenta es:" + miCuenta);
-//Ahorros
+        //Correinte
+        System.out.println("su ceunta Corriente tiene un saldo de:" + miCuenta.getCorriente());
+       
+        //consignar corriente
+        corriente01.consignar(50000);
+        System.out.println("El valor de su cuenta corrientemas consignacion es: " + corriente01.toString());
+
+        //retirar correitne 
+        corriente01.retirar(25000);
+
+        System.out.println("El valor de su cuenta corriente mas el retiro es: " + corriente01.toString());
+        
+        //Ahorros
         System.out.println("su ceunta Ahorro tiene un saldo de:" + miCuenta.getAhorro());
-//consignar
+        //consignar ahorros
         ahorro01.consignar(100000);
         System.out.println("El valor de su cuenta ahorros mas consignacion es: " + ahorro01.toString());
 
-        //retirar 
+        //retirar ahorros
         ahorro01.retirar(0);
 
         System.out.println("El valor de su cuenta ahorros mas el retiro es: " + ahorro01.toString());
@@ -42,17 +54,16 @@ public class SimuladorBancario2 {
         System.out.println("sus intereses son: " + ahorro01.calcularinteres());
         //CDT
         CDT miCDT = new CDT();
-        miCDT.abrirCDT(new Fecha( 21, 03, 2023), 1000000, 2);
+        miCDT.abrirCDT(new Fecha(21, 03, 2023), 1000000, 2);
         System.out.println("Abrir CDT:" + miCDT.toString());
         miCDT.calcularIntereses();
         System.out.println("sus intereses son " + miCDT.getValorLiquidacion());
         //Ahorros + cdt
         miCuenta.actualizarSaldos();
-        System.out.println("Su saldo en Ahorro mas intereses del CDT es:" + (miCuenta.getAhorro()) );
-         // actualizar cdt
-         miCuenta.dejar_0_CDT();
-         System.out.println("su saldo en CDT es:" + miCuenta.getCdt() );
-        
-    
+        System.out.println("Su saldo en Ahorro mas intereses del CDT es:" + (miCuenta.getAhorro()));
+        // actualizar cdt
+        miCuenta.dejar_0_CDT();
+        System.out.println("su saldo en CDT es:" + miCuenta.getCdt());
+
     }
 }
