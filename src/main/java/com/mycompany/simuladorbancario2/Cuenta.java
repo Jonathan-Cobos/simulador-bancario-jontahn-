@@ -98,4 +98,11 @@ public class Cuenta {
         return "Cuenta{" + "\ncliente=" + cliente + ",\n correo=" + correo + ", \ncedula=" + cedula + ", \nahorro=" + ahorro + ", \ncorriente=" + corriente + ",\n cdt=" + cdt + ",\n mesessimulacion=" + mesessimulacion + '}';
     }
 
+    //actulizar saldo cdt 
+    public void  actualizarSaldos(){
+    
+    
+       this.ahorro.consignar(this.cdt.getValorLiquidacion());
+    
+    }
 }
