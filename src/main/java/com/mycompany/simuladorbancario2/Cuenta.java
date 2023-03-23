@@ -105,4 +105,11 @@ public class Cuenta {
        this.ahorro.consignar(this.cdt.getValorLiquidacion());
     
     }
+    //dejar en 0 CDt
+    public void  dejar_0_CDT(){
+    
+    this.cdt.setValorApertura(0);
+    this.cdt.setMeses(0);
+    }
+    
 }
