@@ -34,5 +34,15 @@ public class Corriente {
     public String toString() {
         return "Corriente{" + "saldo=" + saldo + '}';
     }
+//consignar
+    public void consignar(double valor) {
+        this.saldo += valor;
 
+    }
+
+    //retirar 
+    public void retirar(double valor) {
+        this.saldo -= valor;
+
+    }
 }
